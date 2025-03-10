@@ -15,13 +15,27 @@
     
 """
 
-questions_and_answers = {}
+questions_and_answers = {
+    "Столица России?": "Москва",
+    "Столица Франции?": "Париж",
+    "Столица Германии?": "Берлин",
+    "Столица Италии?": "Рим",
+    "Столица Японии?": "Токио",
+    "Столица Гондураса?": "Тегусигальпа",
+    "Столица Тайланда?": "Бангкок",
+    "Столица Мадагаскара?": "Антананариву"
+}
 
 def ask_user(answers_dict):
-    """
-    Замените pass на ваш код
-    """
-    pass
+    while True:
+        my_question = input("Введите Ваш вопрос: ")
+        if my_question.lower() in ("хватит", "прекрати", "остановись"):
+            print("Как пожелаете")
+            break
+        if my_question in questions_and_answers:
+            print(questions_and_answers[my_question])
+        else:
+            print('Загугли, я не знаю')
     
 if __name__ == "__main__":
     ask_user(questions_and_answers)
