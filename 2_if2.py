@@ -15,18 +15,21 @@
 
 """
 
-def main():
-    first_string = input()
-    second_string = input()
+def main(first_string, second_string):
 
-    if type(first_string) != str and type(second_string) != str:
+    if not isinstance(first_string, str) or not isinstance(second_string, str):
         return('0')
     elif first_string == second_string:
         return('1')
-    elif second_string == 'learn':
-        return('3')
     elif len(first_string) > len(second_string):
         return('2')
+    elif second_string == 'learn':
+        return('3')
     
 if __name__ == "__main__":
-    print(main())
+    print(main('True', 123))
+    print(main(123, 'True'))
+    print(main('test', 'test'))
+    print(main('testtest', 'test'))
+    print(main("testtest", "learn"))
+    print(main("test", "learn"))

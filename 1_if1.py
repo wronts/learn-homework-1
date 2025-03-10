@@ -14,8 +14,16 @@
 
 """
 
+def input_int(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Ошибка: введите целое число!")
+
+
 def main():  
-    age = int(input("Введите Ваш возраст: "))
+    age = input_int("Введите Ваш возраст: ")
 
     if age <= 6:
         return "Вы должны быть в детском саду"

@@ -11,9 +11,11 @@
 
 
 def hello_user():
-    how_are_you = ''
-    while how_are_you != 'Хорошо':
-        how_are_you = input("Как дела? ")
+    while True:
+        answer = input('Как дела?').capitalize()
+        if answer == 'Хорошо':
+            print('Ну и хорошо, что все хорошо')
+            break
 
     
 if __name__ == "__main__":
